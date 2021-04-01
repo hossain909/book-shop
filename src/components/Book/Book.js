@@ -6,7 +6,7 @@ import { BookDetailContext } from '../../App';
 const Book = ({book}) => {
  const [bookDetail, setBookDetail] = useContext(BookDetailContext)
  const loadSingeBook = (id) =>{
-   fetch(`http://localhost:5000/book/${id}`)
+   fetch(`https://rhubarb-crisp-18858.herokuapp.com/book/${id}`)
    .then(res => res.json())
    .then(data => {
      setBookDetail([data])

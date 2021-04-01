@@ -17,7 +17,7 @@ const AddBooks = () => {
     }
     console.log(data);
     console.log(bookInfo);
-    const url = `http://localhost:5000/addBook`
+    const url = `https://rhubarb-crisp-18858.herokuapp.com/addBook`
     fetch(url,{
       method: "POST",
       headers: {

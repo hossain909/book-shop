@@ -5,7 +5,7 @@ const DeleteBook = ({book}) => {
   const [deleted, setDeleted] = useState(false)
 
   const handleDeleteBook = (id) =>{
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://rhubarb-crisp-18858.herokuapp.com/delete/${id}`, {
       method: "DELETE",
     })
       .then(res => res.json())

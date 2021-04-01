@@ -16,7 +16,7 @@ const CheckOut = () => {
   const handleBooking = () =>{
     let addOrders = {...bookInfo, ...loggedInUser,orderPlaced: new Date()}
     console.log(addOrders);
-    fetch("http://localhost:5000/addOrders",{
+    fetch("https://rhubarb-crisp-18858.herokuapp.com/addOrders",{
       method: "POST",
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
