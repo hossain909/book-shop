@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BookDetailContext } from '../../App';
 
@@ -12,18 +12,32 @@ const Book = ({book}) => {
      setBookDetail([data])
    })
  }
+  const cardStyle = {
+    width: '15rem',
+    margin: "auto",
+    marginBottom: "35px",
+    textAlign: "center",
+    color: "#fff",
+    backgroundColor: "#073b1a",
+    boxShadow: "10px 10px 94px 50px rgba(0,0,0,0.54) inset"
+  }
+  const authorTextColor = {
+    color: "orange"
+  }
   return (
-    <Card className="col-md-4 text-center" style={{width: "15rem"}}>
-      <Card.Img className="w-75 m-auto" variant="top" src={book.imageURL} />
-      <Card.Body>
-        <Card.Title>{book.bookName}</Card.Title>
-        <Card.Text>{book.authorName}</Card.Text>
-        <footer className="d-flex justify-content-between">
-          <h5>Price:$ {book.price}</h5>
-          <Button onClick={()=>loadSingeBook(book._id)} as={Link} to="/checkOut" variant="primary">Buy Now</Button>
-        </footer>
-      </Card.Body>
-    </Card>
+    <Col md={3}>
+      <Card className="text-center" style={cardStyle}>
+        <Card.Img className="w-75 m-auto p-3" variant="top" src={book.imageURL} fluid="true"/>
+        <Card.Body>
+          <Card.Title>{book.bookName}</Card.Title>
+          <Card.Text style={authorTextColor}>{book.authorName}</Card.Text>
+          <footer className="d-flex justify-content-between">
+            <h6>Price:$ {book.price}</h6>
+            <Button onClick={()=>loadSingeBook(book._id)} as={Link} to="/checkOut" variant="primary" size="sm">Buy Now</Button>
+          </footer>
+        </Card.Body>
+      </Card>
+    </Col>
     
   );
 };
