@@ -32,8 +32,8 @@ const Book = ({book}) => {
           <Card.Title>{book.bookName}</Card.Title>
           <Card.Text style={authorTextColor}>{book.authorName}</Card.Text>
           <footer className="d-flex justify-content-between">
-            <h6>Price:$ {book.price}</h6>
-            <Button onClick={()=>loadSingeBook(book._id)} as={Link} to="/checkOut" variant="primary" size="sm">Buy Now</Button>
+            <h6 className="mt-1">Price: ${book.price}</h6>
+            <Button onClick={()=>loadSingeBook(book._id)} as={Link} to="/checkOut" variant="success" size="sm">Buy Now</Button>
           </footer>
         </Card.Body>
       </Card>
