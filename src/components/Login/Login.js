@@ -4,6 +4,7 @@ import React, { useContext, useState } from 'react';
 import { useHistory, useLocation } from "react-router";
 import { UserContext } from "../../App";
 import firebaseConfig from "../../firebase.config";
+import google from "../../icons/google.png";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig)
@@ -41,13 +42,8 @@ const LogIn = () => {
   }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "10px" }}>
-      <button onClick={googleSignIn}>Continue with Google</button><br />
-
-      {user.success
-        ? <h5 style={{ color: "green", marginTop: "10px" }}>User {newUser ? "Created" : "Logged In"} Successfully</h5>
-        : <h5 style={{ color: "red", marginTop: "10px" }}>{user.error}</h5>
-      }
+    <div className="text-center mt-5">
+      <button className=" mt-5" onClick={googleSignIn}> <img style={{width: "30px"}} src={google} alt=""/> Continue with Google</button><br />
     </div>
   );
 };

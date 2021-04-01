@@ -7,10 +7,10 @@ const Admin = () => {
   return (
     <Container className="mt-5">
       <Row>
-        <Col md={4}>
-          <Button as={Link} to="/addBooks">Add Books</Button>
+        <Col md={3}>
+          <Button as={Link} to="/manageBooks">Manage Books</Button>
         </Col>
-        <Col md={8}>
+        <Col md={9}>
           <AddBook></AddBook>
         </Col>
       </Row>

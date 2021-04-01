@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 
 const AddBooks = () => {
@@ -45,9 +46,9 @@ const AddBooks = () => {
       });
   }
   return (
-    <div>
-      <h2>Add Your Favourite Books</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <Container>
+      <h2 className="text-center mb-3">Add your favourite books here</h2>
+      <form  onSubmit={handleSubmit(onSubmit)}>
         <input className="form-control" name="bookName" placeholder="book name" ref={register} /><br/>
         <input className="form-control" name="authorName" placeholder="author name" ref={register} /><br/>
         <input style={{marginBottom: "20px"}} onChange={handleImageUpload} name="imageURL" type="file" /><br />
@@ -56,7 +57,7 @@ const AddBooks = () => {
 
         <input type="submit" />
       </form>
-    </div>
+    </Container>
   );
 }
 export default AddBooks;

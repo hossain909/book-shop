@@ -15,7 +15,6 @@ const Header = () => {
           <Nav.Link className="mr-3" as={Link} to="/orders">Orders</Nav.Link>
           <Nav.Link className="mr-3" as={Link} to="/admin">Admin</Nav.Link>
           <Nav.Link className="mr-3" as={Link} to="/deals">Deals</Nav.Link>
-          <Nav.Link as={Link} to="/manageBooks">Manage Books</Nav.Link>
         </Nav>
         {loggedInUser.email
           ? <h6 style={{ color: "#fdc600", marginTop: "7px", fontWeight: "bold" }}>{loggedInUser.name}</h6>

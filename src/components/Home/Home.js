@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import Book from '../Book/Book';
 
 const Home = () => {
@@ -13,6 +13,9 @@ const Home = () => {
   return (
     <Container>
       <Row className="mt-5 mb-5">
+        {
+          books.length === 0 && <Spinner className="m-auto" animation="border" variant="success" />
+        }
         {
           books.map(book => <Book key={book._id} book={book}></Book>)
         }
