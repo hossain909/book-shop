@@ -15,8 +15,8 @@ const ManageBooks = () => {
     <Container>
       <div className="d-flex justify-content-between mt-5">
         <h5 className="w-25">Book Name</h5>
-        <h5>Author Name</h5>
-        <h5>Price</h5>
+        <h5 className="w-25">Author Name</h5>
+        <h5 className="w-25">Price</h5>
         <h5>Action</h5>
       </div>
       {

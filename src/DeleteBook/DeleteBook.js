@@ -15,10 +15,10 @@ const DeleteBook = ({book}) => {
   }
   return (
         <div className="d-flex justify-content-between" >
-          <p className="mt-1 w-25">{book.bookName}</p>
-          <p className="mt-1 w-25">{book.authorName}</p>
-          <p className="mt-1 w-25">{book.price}</p>
-          <Button onClick={() => handleDeleteBook(book._id)} size="sm" className="btn-danger mt-1">Delete</Button>
+          <p className="mt-2 w-25">{book.bookName}</p>
+          <p className="mt-2 w-25">{book.authorName}</p>
+          <p className="mt-2 w-25">{book.price}</p>
+          <Button onClick={() => handleDeleteBook(book._id)} size="sm" className="btn-danger mb-3">Delete</Button>
         </div>
   );
 };

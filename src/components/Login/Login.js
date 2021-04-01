@@ -39,17 +39,6 @@ const LogIn = () => {
         console.log(errorCode, errorMessage);
       });
   }
-  // //=================== Update UserInfo =====================/
-  // const updateUserInfo = (name) => {
-  //   const user = firebase.auth().currentUser;
-  //   user.updateProfile({
-  //     displayName: name,
-  //   }).then(function () {
-  //     console.log("Updated info updated successfully!");
-  //   }).catch(function (error) {
-  //     console.log(error);
-  //   });
-  // }
 
   return (
     <div style={{ textAlign: "center", marginTop: "10px" }}>

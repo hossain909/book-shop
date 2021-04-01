@@ -5,12 +5,12 @@ import AddBook from '../AddBook/AddBook';
 
 const Admin = () => {
   return (
-    <Container >
+    <Container className="mt-5">
       <Row>
-        <Col md={3}>
+        <Col md={4}>
           <Button as={Link} to="/addBooks">Add Books</Button>
         </Col>
-        <Col md={9}>
+        <Col md={8}>
           <AddBook></AddBook>
         </Col>
       </Row>

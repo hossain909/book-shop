@@ -48,11 +48,11 @@ const AddBooks = () => {
     <div>
       <h2>Add Your Favourite Books</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input name="bookName" placeholder="book name" ref={register} /><br/>
-        <input name="authorName" placeholder="author name" ref={register} /><br/>
-        <input onChange={handleImageUpload} name="imageURL" type="file" /><br />
-        <input type="number" defaultValue="1" placeholder="quantity" name="quantity" ref={register({ min: 1, max: 10 })}/><br/>
-        <input type="number"  name="price" placeholder="book price" ref={register({ min: 10})}/><br/>
+        <input className="form-control" name="bookName" placeholder="book name" ref={register} /><br/>
+        <input className="form-control" name="authorName" placeholder="author name" ref={register} /><br/>
+        <input style={{marginBottom: "20px"}} onChange={handleImageUpload} name="imageURL" type="file" /><br />
+        <input className="form-control" type="number" defaultValue="1" placeholder="quantity" name="quantity" ref={register({ min: 1, max: 10 })}/><br/>
+        <input className="form-control" type="number"  name="price" placeholder="book price" ref={register({ min: 10})}/><br/>
 
         <input type="submit" />
       </form>

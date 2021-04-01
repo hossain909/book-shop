@@ -18,7 +18,7 @@ const Header = () => {
           <Nav.Link as={Link} to="/manageBooks">Manage Books</Nav.Link>
         </Nav>
         {loggedInUser.email
-          ? <h6 style={{ color: "red", marginTop: "7px", fontWeight: "bold" }}>{loggedInUser.name}</h6>
+          ? <h6 style={{ color: "#fdc600", marginTop: "7px", fontWeight: "bold" }}>{loggedInUser.name}</h6>
           : <Button size="sm" as={Link} to="/checkOut">Login</Button>
         }
       </Navbar>
