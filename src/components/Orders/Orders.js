@@ -40,6 +40,7 @@ const Orders = () => {
           </form>
         </Col>
         <Col md={8}>
+          <h3 className="text-center">Order Details</h3>
           {
             orders.map(order => <OrderDetail price={totalPrice} order={order}></OrderDetail>)
           }
