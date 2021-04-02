@@ -15,7 +15,6 @@ const CheckOut = () => {
   }
   const handleBooking = () =>{
     let addOrders = {...bookInfo, ...loggedInUser,orderPlaced: new Date()}
-    console.log(addOrders);
     fetch("https://rhubarb-crisp-18858.herokuapp.com/addOrders",{
       method: "POST",
       headers: {
@@ -25,7 +24,9 @@ const CheckOut = () => {
     })
     .then(res => res.json())
     .then(data => {
-     console.log(data);
+      if(data){
+        alert("Your order placed successfully")
+      }
     })
   }
   return (
@@ -39,10 +40,10 @@ const CheckOut = () => {
       <div className="d-flex justify-content-between">
         <p>{bookName}</p>
         <p>{quantity}</p>
-        <p>{price}</p>
+        <p>${price}</p>
       </div>
       <Link to="/orders">
-        <button className="btn-primary" onClick={() => handleBooking()} >CheckOut</button>
+        <button className="btn btn-primary mt-4" onClick={() => handleBooking()} >CheckOut</button>
       </Link>
     </Container>
   );
