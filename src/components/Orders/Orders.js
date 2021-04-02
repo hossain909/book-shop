@@ -33,6 +33,8 @@ const Orders = () => {
             <input className="form-control" value={loggedInUser.email} placeholder="Enter email" type="email" name="email"/>
             <label for="address">Address</label>
             <input className="form-control"  placeholder="Enter address" type="email" name="email"/>
+            <label for="phone">Phone</label>
+            <input className="form-control"  placeholder="Enter phone number" type="text" name="email"/>
             <label for="address">City</label>
             <input className="form-control"  placeholder="Enter city" type="email" name="email"/>
             <button type="button" class="btn btn-primary mt-3">Submit</button>
