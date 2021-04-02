@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import { UserContext } from '../../App';
-import OrderDetail from '../../OrderDetail/OrderDetail';
+import OrderDetail from '../OrderDetail/OrderDetail';
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);

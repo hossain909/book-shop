@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import DeleteBook from '../../DeleteBook/DeleteBook';
 import plus from "../../icons/plus 1.png";
+import DeleteBook from '../DeleteBook/DeleteBook';
 
 const ManageBooks = () => {
   const [displayBooks, setDisplayBooks] = useState([])
