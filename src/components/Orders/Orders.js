@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import { UserContext } from '../../App';
 import OrderDetail from '../../OrderDetail/OrderDetail';
 
@@ -15,8 +15,13 @@ const Orders = () => {
   
   return (
     <Container>
-      <h3 className="text-center">You have {orders.length} orders</h3>
-      <h3>{email}</h3>
+      <h4 className="text-center mt-5">You have {orders.length} orders</h4>
+       <div style={{width: "20px", margin: "auto"}}>
+        {
+          orders.length === 0 && <Spinner animation="border" size="lg" variant="success" />
+        }
+       </div>
+      <h4>{email}</h4>
       <Row>
         <Col>
           {

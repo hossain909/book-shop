@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 
 const AddBooks = () => {
   const { register, handleSubmit, watch, errors } = useForm();
@@ -47,16 +48,23 @@ const AddBooks = () => {
   }
   return (
     <Container>
-      <h2 className="text-center mb-3">Add your favourite books here</h2>
-      <form  onSubmit={handleSubmit(onSubmit)}>
-        <input className="form-control" name="bookName" placeholder="book name" ref={register} /><br/>
-        <input className="form-control" name="authorName" placeholder="author name" ref={register} /><br/>
-        <input style={{marginBottom: "20px"}} onChange={handleImageUpload} name="imageURL" type="file" /><br />
-        <input className="form-control" type="number" defaultValue="1" placeholder="quantity" name="quantity" ref={register({ min: 1, max: 10 })}/><br/>
-        <input className="form-control" type="number"  name="price" placeholder="book price" ref={register({ min: 10})}/><br/>
+      <Row className="mt-5">
+        <Col md={3}>
+          <Button as={Link} to="/manageBooks">Manage Books</Button>
+        </Col>
+        <Col md={9}>
+          <h3>Add your favourite books here</h3>
+          <form  onSubmit={handleSubmit(onSubmit)}>
+            <input className="form-control" name="bookName" placeholder="book name" ref={register} /><br/>
+            <input className="form-control" name="authorName" placeholder="author name" ref={register} /><br/>
+            <input style={{marginBottom: "20px"}} onChange={handleImageUpload} name="imageURL" type="file" /><br />
+            <input className="form-control" type="number" defaultValue="1" placeholder="quantity" name="quantity" ref={register({ min: 1, max: 10 })}/><br/>
+            <input className="form-control" type="number"  name="price" placeholder="book price" ref={register({ min: 10})}/><br/>
 
-        <input type="submit" />
-      </form>
+            <input type="submit" />
+          </form>
+        </Col>
+      </Row>
     </Container>
   );
 }

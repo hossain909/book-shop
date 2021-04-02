@@ -1,19 +1,11 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import AddBook from '../AddBook/AddBook';
+import { Container } from 'react-bootstrap';
+import ManageBooks from '../ManageBooks/ManageBooks';
 
 const Admin = () => {
   return (
     <Container className="mt-5">
-      <Row>
-        <Col md={3}>
-          <Button as={Link} to="/manageBooks">Manage Books</Button>
-        </Col>
-        <Col md={9}>
-          <AddBook></AddBook>
-        </Col>
-      </Row>
+      <ManageBooks></ManageBooks>
     </Container>
   );
 };

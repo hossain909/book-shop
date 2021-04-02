@@ -32,14 +32,14 @@ const CheckOut = () => {
     <Container>
       <h2>CheckOut</h2>
       <div className="d-flex justify-content-between mt-5">
-        <h5 style={{ width: "200px" }}>Description</h5>
-        <h5 style={{ width: "250px" }}>Quantity</h5>
-        <h5 style={{ width: "210px" }}>Price</h5>
+        <h5>Description</h5>
+        <h5>Quantity</h5>
+        <h5>Price</h5>
       </div>
       <div className="d-flex justify-content-between">
-        <p style={{ width: "200px" }}>{bookName}</p>
-        <p style={{ width: "200px" }}>{quantity}</p>
-        <p style={{ width: "200px" }}>{price}</p>
+        <p>{bookName}</p>
+        <p>{quantity}</p>
+        <p>{price}</p>
       </div>
       <Link to="/orders">
         <button className="btn-primary" onClick={() => handleBooking()} >CheckOut</button>

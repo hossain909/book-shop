@@ -14,7 +14,7 @@ const Home = () => {
     <Container>
       <Row className="mt-5 mb-5">
         {
-          books.length === 0 && <Spinner className="m-auto" animation="border" variant="success" />
+          books.length === 0 && <Spinner className="m-auto" animation="border" size="lg" variant="success" />
         }
         {
           books.map(book => <Book key={book._id} book={book}></Book>)
